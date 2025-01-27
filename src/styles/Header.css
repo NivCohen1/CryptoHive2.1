@@ -1,0 +1,83 @@
+.auth-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  min-height: 48px; /* Keep the header compact */
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Center all content vertically */
+  padding: 0.3rem 1.5rem;
+}
+
+.auth-logged-in {
+  display: flex;
+  flex-direction: column; /* Stack the username and buttons vertically */
+  align-items: flex-end; /* Align everything to the right */
+  gap: 0.2rem; /* Smaller gap between username and buttons */
+  margin: 0; /* Remove any unintended margin */
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 0.3rem; /* Smaller gap between buttons */
+  margin: 0; /* Ensure no extra space is added */
+}
+
+.auth-button {
+  padding: 0.3rem 1rem; /* Adjust padding for smaller buttons */
+  font-size: 0.9rem; /* Adjust font size to fit better */
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #1d4ed8;
+}
+
+.auth-button.logout {
+  background-color: #545252;
+}
+
+.auth-button.profile {
+  background-color: #4caf50; /* Green for the profile button */
+}
+
+
+.user-name {
+  font-size: 0.9rem; /* Adjust font size for consistency */
+  font-weight: bold;
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0; /* Ensure no extra space is added */
+}
+
+@media (max-width: 480px) {
+  .auth-header {
+    padding: 0.25rem 0.75rem;
+  }
+  
+  .user-name {
+    font-size: 0.8rem;
+    max-width: 150px;
+  }
+
+  .auth-button {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
